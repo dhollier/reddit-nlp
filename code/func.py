@@ -141,7 +141,7 @@ def get_posts(subname,sort,limit_val=10):
 
 
 def get_comments(permalink):
-    url = 'https://www.redit.com' + permalink
+    url = 'https://www.reddit.com' + permalink
 
     print(f'~Getting comments for: {url}')
     c_list = []
