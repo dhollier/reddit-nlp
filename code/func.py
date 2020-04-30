@@ -21,8 +21,16 @@ print(reddit.user.me())
 
 
 #functions
-def get_posts(subname,sort,limit_val=10):
-    print(f'~Getting posts for {subname} sorted by {sort} with limit {limit_val}')
+def get_posts(subname,sort,limit_val=10, time_filter="all"):
+    
+    if sort == 'top':
+        print(f'~Getting posts for {subname} sorted by {sort}, for {time_filter} with limit {limit_val}')
+    else:
+        print(f'~Getting posts for {subname} sorted by {sort} with limit {limit_val}')
+
+
+
+
     posts = []
 
     if sort == 'controversial':
@@ -36,7 +44,7 @@ def get_posts(subname,sort,limit_val=10):
     if sort == 'rising':
         ml_subreddit = reddit.subreddit(subname).rising(limit=limit_val)
     if sort == 'top':
-        ml_subreddit = reddit.subreddit(subname).top(limit=limit_val)
+        ml_subreddit = reddit.subreddit(subname).top(limit=limit_val, time_filter=time_filter)
     
 
 

@@ -6,6 +6,8 @@
 #user
 raw/
 *.ini
+code/old/
+output/
 
 
 ### macOS ###
